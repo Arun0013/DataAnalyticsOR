@@ -1,0 +1,2 @@
+matlab -nojvm -nodisplay -nosplash
+(to open matlab without gui)
