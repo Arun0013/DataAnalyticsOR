@@ -34,38 +34,71 @@ m = size(X,1);
 for i = 1:m
 	for j = 1:redDim
 		ClusterMatrix(i,1,j) = X(i,j);
-		ClusterSize(i) = 1;
 	end
+	ClusterSize(i) = 1;
 end
 nCluster = length(ClusterSize);
 
 ClusterSymmetry  = zeros(nCluster, nCluster);
 for i = 1:nCluster-1
 	for j = i+1:nCluster
-		symmetry = (ClusterMatrix(i,1,1) - ClusterMatrix(j,1,1))^2 + (ClusterMatrix(i,1,2) - ClusterMatrix(j,1,2))^2;
+		symmetry = sqrt((ClusterMatrix(i,1,1) - ClusterMatrix(j,1,1))^2 + (ClusterMatrix(i,1,2) - ClusterMatrix(j,1,2))^2);
 		ClusterSymmetry(i,j) = symmetry;
 		ClusterSymmetry(j,i) = symmetry;
 	end
 end
 ClusterSymmetry = (max(max(ClusterSymmetry))+1)*eye(nCluster, nCluster) + ClusterSymmetry;
 
-[M1, I1] = min(ClusterSymmetry);
-[M2, I2] = min(M1);
-columnNumber = I2(1);
-rowNumber = I1(columnNumber);
-
-newCluster = min([rowNumber, columnNumber]);
-remCluster = max([rowNumber, columnNumber]);
-currentClusterSize = size(ClusterMatrix(newCluster, :, :), 1);
-for j = currentClusterSize+1 : currentClusterSize+ClusterSize(remCluster)
-	for k = 1:redDim
-		ClusterMatrix(newCluster, j, k) = ClusterMatrix(remCluster, j - currentClusterSize, k);
+while (nCluster > 10)
+	if(mod(nCluster,100) == 0)
+		fprintf('Number of Clusters: %d\n', nCluster);
 	end
+        if(sum(sum(isnan(ClusterSymmetry)==1))>0)
+                fprintf('NAN in Main 2\n');
+        end
+
+	[M1, I1] = min(ClusterSymmetry);
+	[M2, I2] = min(M1);
+	columnNumber = I2(1);
+	rowNumber = I1(columnNumber);
+	if(columnNumber == rowNumber)
+		fprintf('Same number: %d\n', rowNumber);
+		break;
+	end
+	newCluster = min([rowNumber, columnNumber]);
+	remCluster = max([rowNumber, columnNumber]);
+	%fprintf('NewCluster: %d RemCluster: %d\n', newCluster, remCluster);
+	currentClusterSize = ClusterSize(newCluster);
+	increaseSize = ClusterSize(remCluster);
+	for j = currentClusterSize+1 : currentClusterSize+ClusterSize(remCluster)
+		for k = 1:redDim
+			ClusterMatrix(newCluster, j, k) = ClusterMatrix(remCluster, j - currentClusterSize, k);
+		end
+	end
+	ClusterSize(newCluster) = currentClusterSize+ClusterSize(remCluster);
+	ClusterMatrix(remCluster, :, :) = [];
+	ClusterSize(remCluster) = [];
+	%sum(ClusterSize)
+	nCluster = length(ClusterSize);
+	if(nCluster > 10) 
+		ClusterSymmetry = simpleLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		%ClusterSymmetry = completeLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		if(sum(sum(isnan(ClusterSymmetry)==1))>0)
+			fprintf('NAN in Main\n');
+		end
+		%max(max(ClusterSymmetry))+1
+		%ClusterSymmetry = (max(max(ClusterSymmetry))+1)*eye(nCluster, nCluster) + ClusterSymmetry;
+		for i = 1:nCluster
+			ClusterSymmetry(i,i) = 10000;
+		end
+		if(sum(sum(isnan(ClusterSymmetry)==1))>0)
+                        fprintf('NAN in Main 1\n');
+                end
+
+	end
+	%ClusterSymmetry = (max(max(ClusterSymmetry))+1)*eye(nCluster, nCluster) + ClusterSymmetry;
 end
-ClusterSize(newCluster) = currentClusterSize+ClusterSize(remCluster);
-ClusterMatrix(remCluster, :, :) = [];
-ClusterSize(remCluster) = [];
-nCluster = length(ClusterSize);
+
 
 %{
 for i = 1:size(X,1)
