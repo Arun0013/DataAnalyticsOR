@@ -81,8 +81,9 @@ while (nCluster > 10)
 	%sum(ClusterSize)
 	nCluster = length(ClusterSize);
 	if(nCluster > 10) 
-		ClusterSymmetry = simpleLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		%ClusterSymmetry = simpleLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
 		%ClusterSymmetry = completeLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		%ClusterSymmetry = averageLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
 		if(sum(sum(isnan(ClusterSymmetry)==1))>0)
 			fprintf('NAN in Main\n');
 		end

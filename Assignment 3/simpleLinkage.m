@@ -5,6 +5,7 @@ ClusterSymmetryNew(:, columnNumber) = [];
 ClusterSymmetryNew(columnNumber, :) = [];
 nCluster = length(ClusterSymmetry)-1;
 
+%{
 i = rowNumber;
 for j = 1:nCluster
 	minSymmetry = ClusterSymmetryNew(i, j);
@@ -23,9 +24,9 @@ for j = 1:nCluster
 	end
 end
 end
+%}
 
 
-%{
 for k =1:nCluster
 	if(k < columnNumber)
 		if(ClusterSymmetry(columnNumber,k) < ClusterSymmetry(rowNumber, k))
@@ -39,7 +40,6 @@ for k =1:nCluster
                 end
 	end
 end
-%}
 
 %{
 nCluster = length(ClusterSymmetry)-1;
