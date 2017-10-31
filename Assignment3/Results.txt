@@ -1,0 +1,101 @@
+Dendogram:
+SL 1: 1787           1           1           1           1           2           1      1 1 1
+SL 2: 1787           1           1           1           1           2           1  	1 1 1
+SL 3: 
+CL 1: 173   103   239   241   197   274   217   183   137    33 
+CL 2: 173   103   239   241   197   274   217   183   137    33
+CL 3:
+AL 1: 175   452   269   190   248    80   189    65   126     3
+AL 2: 175   452   269   190   248    80   189    65   126     3
+AL 3:
+
+KMeans: (64)
+K: 5
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 5 clusters: 0.139455
+K: 6
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 6 clusters: 0.148589
+K: 7
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 7 clusters: 0.167441
+K: 8
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 8 clusters: 0.164896
+K: 9
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 9 clusters: 0.164098
+K: 10
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 10 clusters: 0.192077
+K: 11
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 11 clusters: 0.177861
+K: 12
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 12 clusters: 0.177767
+K: 13
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 13 clusters: 0.178527
+K: 14
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 14 clusters: 0.178914
+K: 15
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 15 clusters: 0.180178
+
+K: 5
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 5 clusters: 0.393714
+K: 6
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 6 clusters: 0.390080
+K: 7
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 7 clusters: 0.409934
+K: 8
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 8 clusters: 0.399357
+K: 9
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 9 clusters: 0.396453
+K: 10
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 10 clusters: 0.369690
+K: 11
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 11 clusters: 0.372688
+K: 12
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 12 clusters: 0.367747
+K: 13
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 13 clusters: 0.374094
+K: 14
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 14 clusters: 0.371025
+K: 15
+Center Initialized
+Cluster formed successfully 
+Average Silhouette Value for 15 clusters: 0.366022 

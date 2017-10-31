@@ -7,7 +7,6 @@ yFileName = 'y.csv';
 
 X = dlmread(XFileName,',',1,0);
 y = dlmread(yFileName,',',1,0);
-
 Xorig = X;
 
 [m p] = size(X);
@@ -22,15 +21,16 @@ if ~issorted(diag(D))
 end
 V = Vsort;
 D = D(:,Isort);
-
 redDim = 2;
 Vlim = V(:,1:redDim);
 Dlim = D(:,1:redDim);
 
 X = X*Vlim;
 
-m = size(X,1);
+choice = input('\nEnter 1 for simple linkage, 2 for complete linekage, 3 for average linakge and 0 to exit: ');
 
+while(choice ~= 0)
+m = size(X,1);
 for i = 1:m
 	for j = 1:redDim
 		ClusterMatrix(i,1,j) = X(i,j);
@@ -50,9 +50,9 @@ end
 ClusterSymmetry = (max(max(ClusterSymmetry))+1)*eye(nCluster, nCluster) + ClusterSymmetry;
 
 while (nCluster > 10)
-	if(mod(nCluster,100) == 0)
-		fprintf('Number of Clusters: %d\n', nCluster);
-	end
+	%if(mod(nCluster,100) == 0)
+	%	fprintf('Number of Clusters: %d\n', nCluster);
+	%end
         if(sum(sum(isnan(ClusterSymmetry)==1))>0)
                 fprintf('NAN in Main 2\n');
         end
@@ -80,10 +80,14 @@ while (nCluster > 10)
 	ClusterSize(remCluster) = [];
 	%sum(ClusterSize)
 	nCluster = length(ClusterSize);
-	if(nCluster > 10) 
-		%ClusterSymmetry = simpleLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
-		%ClusterSymmetry = completeLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
-		%ClusterSymmetry = averageLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+	if(nCluster > 10)
+		if(choice == 1) 
+			ClusterSymmetry = simpleLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		elseif(choice == 2)	
+			ClusterSymmetry = completeLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		else
+			ClusterSymmetry = averageLinkage(ClusterMatrix, ClusterSize, newCluster, remCluster, ClusterSymmetry, increaseSize);
+		end
 		if(sum(sum(isnan(ClusterSymmetry)==1))>0)
 			fprintf('NAN in Main\n');
 		end
@@ -99,40 +103,52 @@ while (nCluster > 10)
 	end
 	%ClusterSymmetry = (max(max(ClusterSymmetry))+1)*eye(nCluster, nCluster) + ClusterSymmetry;
 end
+fprintf('\nNumber of points in each cluster:');
+display(ClusterSize);
 
-
-%{
-for i = 1:size(X,1)
-	if(y(i) == 0)
+figure;
+for i = 1:nCluster
+    for j = 1:ClusterSize(i)
+	if(i == 9)
 		hold on;
-		plot(X(i,1),X(i,2),'b*');
-	elseif(y(i) == 1)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'y*');
+	elseif(i == 1)
 		hold on;
-		plot(X(i,1),X(i,2),'b+');
-	elseif(y(i) == 2)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'m+');
+	elseif(i == 2)
 		hold on;
-	        plot(X(i,1),X(i,2),'bo');
-	elseif(y(i) == 3)
+	        plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'co');
+	elseif(i == 3)
 		hold on;
-		plot(X(i,1),X(i,2),'bs');	
-	elseif(y(i) == 4)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'rs');	
+	elseif(i == 4)
 	        hold on;
-		plot(X(i,1),X(i,2),'bd');
-	 elseif(y(i) == 5)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'gd');
+	 elseif(i == 5)
 	        hold on;
-		plot(X(i,1),X(i,2),'r+');
-	elseif(y(i) == 6)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'b*');
+	elseif(i == 6)
 		hold on;
-		plot(X(i,1),X(i,2),'ro');
-	elseif(y(i) == 7)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'k+');
+	elseif(i == 7)
 		hold on;
-		plot(X(i,1),X(i,2),'rs');
-	elseif(y(i) == 8)
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'ro');
+	elseif(i == 8)
 		hold on;
-		plot(X(i,1),X(i,2),'rd');
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'kd');
 	else
 		hold on;
-		plot(X(i,1),X(i,2),'r*');
+		plot(ClusterMatrix(i,j,1), ClusterMatrix(i,j,2),'bs');
 	end
+   end
 end
-%}
+if(choice == 1)
+                title('Clusters for Simple Linkage HAC');
+elseif(choice == 2)
+                title('Clusters for Complete Linkage HAC');
+else
+                title('Clusters for Average Linkage HAC');
+end
+choice = input('\nEnter 1 for simple linkage, 2 for complete linekage, 3 for average linakge and 0 to exit: ');
+end
+
