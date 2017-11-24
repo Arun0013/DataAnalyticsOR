@@ -1,0 +1,27 @@
+\contentsline {chapter}{List of Figures}{v}{section*.2}
+\contentsline {chapter}{List of Tables}{vii}{section*.4}
+\contentsline {section}{\numberline {0.1}Introduction}{1}{section.0.1}
+\contentsline {section}{\numberline {0.2}Support vector machines (SVM) combined with feature selection for breast cancer diagnosis}{1}{section.0.2}
+\contentsline {subsection}{\numberline {0.2.1}Aim}{1}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {0.2.2}Procedure}{1}{subsection.0.2.2}
+\contentsline {subsubsection}{Feature selection}{2}{section*.6}
+\contentsline {subsubsection}{SVM model}{2}{section*.7}
+\contentsline {section}{\numberline {0.3}Predictive modeling of hospital readmissions using metaheuristics and data mining}{2}{section.0.3}
+\contentsline {subsection}{\numberline {0.3.1}Aim}{2}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {0.3.2}Procedure}{2}{subsection.0.3.2}
+\contentsline {subsubsection}{Data imbalance problem}{3}{section*.8}
+\contentsline {subsubsection}{Particle swarm optimization based SVM}{3}{section*.9}
+\contentsline {section}{\numberline {0.4}Predicting diabetes mellitus using SMOTE and ensemble machine learning approach}{3}{section.0.4}
+\contentsline {subsection}{\numberline {0.4.1}Aim}{3}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {0.4.2}Procedure}{3}{subsection.0.4.2}
+\contentsline {subsubsection}{Feature selection and data imbalance problem}{3}{section*.10}
+\contentsline {subsubsection}{ML Classification Models}{4}{section*.11}
+\contentsline {section}{\numberline {0.5}Breast cancer diagnosis based on feature extraction using a hybrid of K-means and support vector machine algorithms}{4}{section.0.5}
+\contentsline {subsection}{\numberline {0.5.1}Aim}{4}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {0.5.2}Procedure}{4}{subsection.0.5.2}
+\contentsline {subsubsection}{Feature extraction}{4}{section*.13}
+\contentsline {subsubsection}{SVM model}{6}{section*.16}
+\contentsline {subsection}{\numberline {0.5.3}Results}{6}{subsection.0.5.3}
+\contentsline {subsubsection}{SVM with linear kernel}{7}{section*.17}
+\contentsline {subsubsection}{SVM with sigmoid kernel}{9}{section*.23}
+\contentsline {chapter}{References}{13}{section*.28}

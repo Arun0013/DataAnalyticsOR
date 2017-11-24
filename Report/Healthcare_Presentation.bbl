@@ -1,0 +1,174 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{akay2009support}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Akay}{A.}%
+     {Mehmet~Fatih}{M.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{AMF1}
+  \strng{fullhash}{AMF1}
+  \field{sortinit}{A}
+  \field{number}{2}
+  \field{pages}{3240\bibrangedash 3247}
+  \field{title}{Support vector machines combined with feature selection for
+  breast cancer diagnosis}
+  \field{volume}{36}
+  \field{journaltitle}{Expert systems with applications}
+  \field{year}{2009}
+\endentry
+
+\entry{alghamdi2017predicting}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Alghamdi}{A.}%
+     {Manal}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Al-Mallah}{A.-M.}%
+     {Mouaz}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Keteyian}{K.}%
+     {Steven}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Brawner}{B.}%
+     {Clinton}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ehrman}{E.}%
+     {Jonathan}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sakr}{S.}%
+     {Sherif}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Public Library of Science}%
+  }
+  \strng{namehash}{AM+1}
+  \strng{fullhash}{AMAMMKSBCEJSS1}
+  \field{sortinit}{A}
+  \field{number}{7}
+  \field{pages}{e0179805}
+  \field{title}{Predicting diabetes mellitus using SMOTE and ensemble machine
+  learning approach: The Henry Ford ExercIse Testing (FIT) project}
+  \field{volume}{12}
+  \field{journaltitle}{PLoS One}
+  \field{year}{2017}
+\endentry
+
+\entry{zheng2014breast}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Zheng}{Z.}%
+     {Bichen}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yoon}{Y.}%
+     {Sang~Won}{S.~W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lam}{L.}%
+     {Sarah~S}{S.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{ZBYSWLSS1}
+  \strng{fullhash}{ZBYSWLSS1}
+  \field{sortinit}{Z}
+  \field{number}{4}
+  \field{pages}{1476\bibrangedash 1482}
+  \field{title}{Breast cancer diagnosis based on feature extraction using a
+  hybrid of K-means and support vector machine algorithms}
+  \field{volume}{41}
+  \field{journaltitle}{Expert Systems with Applications}
+  \field{year}{2014}
+\endentry
+
+\entry{zheng2015predictive}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Zheng}{Z.}%
+     {Bichen}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Jinghe}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yoon}{Y.}%
+     {Sang~Won}{S.~W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lam}{L.}%
+     {Sarah~S}{S.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Khasawneh}{K.}%
+     {Mohammad}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Poranki}{P.}%
+     {Srikanth}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{ZB+1}
+  \strng{fullhash}{ZBZJYSWLSSKMPS1}
+  \field{sortinit}{Z}
+  \field{number}{20}
+  \field{pages}{7110\bibrangedash 7120}
+  \field{title}{Predictive modeling of hospital readmissions using
+  metaheuristics and data mining}
+  \field{volume}{42}
+  \field{journaltitle}{Expert Systems with Applications}
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{akay2009support}
+Mehmet~Fatih Akay.
+\newblock Support vector machines combined with feature selection for breast
+  cancer diagnosis.
+\newblock {\em Expert systems with applications}, 36(2):3240--3247, 2009.
+
+\bibitem{zheng2015predictive}
+Bichen Zheng, Jinghe Zhang, Sang~Won Yoon, Sarah~S Lam, Mohammad Khasawneh, and
+  Srikanth Poranki.
+\newblock Predictive modeling of hospital readmissions using metaheuristics and
+  data mining.
+\newblock {\em Expert Systems with Applications}, 42(20):7110--7120, 2015.
+
+\bibitem{alghamdi2017predicting}
+Manal Alghamdi, Mouaz Al-Mallah, Steven Keteyian, Clinton Brawner, Jonathan
+  Ehrman, and Sherif Sakr.
+\newblock Predicting diabetes mellitus using smote and ensemble machine
+  learning approach: The henry ford exercise testing (fit) project.
+\newblock {\em PLoS One}, 12(7):e0179805, 2017.
+
+\bibitem{zheng2014breast}
+Bichen Zheng, Sang~Won Yoon, and Sarah~S Lam.
+\newblock Breast cancer diagnosis based on feature extraction using a hybrid of
+  k-means and support vector machine algorithms.
+\newblock {\em Expert Systems with Applications}, 41(4):1476--1482, 2014.
+
+\end{thebibliography}

@@ -1,0 +1,10 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Variation of validity ratio with number of clusters (original result)\relax }}{5}{figure.caption.14}
+\contentsline {figure}{\numberline {2}{\ignorespaces Variation of validity ratio with number of clusters (new result)\relax }}{6}{figure.caption.15}
+\contentsline {figure}{\numberline {3}{\ignorespaces Variation of accuracy, sensitivity and specificity with change in SVM penalty parameter (C) for linear kernel SVM model built with all the 30 features\relax }}{7}{figure.caption.18}
+\contentsline {figure}{\numberline {4}{\ignorespaces Confusion matrix for linear kernel SVM model built with all the 30 features and C = 70\relax }}{8}{figure.caption.19}
+\contentsline {figure}{\numberline {5}{\ignorespaces Variation of accuracy, sensitivity and specificity with change in SVM penalty parameter (C) for linear kernel SVM model built with the 6 extracted features\relax }}{8}{figure.caption.20}
+\contentsline {figure}{\numberline {6}{\ignorespaces Confusion matrix for linear kernel SVM model built with the 6 extracted features and C = 80\relax }}{9}{figure.caption.21}
+\contentsline {figure}{\numberline {7}{\ignorespaces Variation of accuracy, sensitivity and specificity with change in SVM penalty parameter (C) for sigmoid kernel SVM model built with all the 30 features\relax }}{10}{figure.caption.24}
+\contentsline {figure}{\numberline {8}{\ignorespaces Confusion matrix for sigmoid kernel SVM model built with all the 30 features\relax }}{10}{figure.caption.25}
+\contentsline {figure}{\numberline {9}{\ignorespaces Variation of accuracy, sensitivity and specificity with change in SVM penalty parameter (C) for sigmoid kernel SVM model built with the 6 extracted features\relax }}{11}{figure.caption.26}
+\contentsline {figure}{\numberline {10}{\ignorespaces Confusion matrix for sigmoid kernel SVM model built with the 6 extracted features and C = 80\relax }}{12}{figure.caption.27}
